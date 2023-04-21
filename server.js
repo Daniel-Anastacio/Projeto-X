@@ -12,7 +12,9 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 app.use('/', (req,res)=>{
-    res.render('index.html')
+    res.render('login.html')
 });
 
-server.listen(3000);
+server.listen(3000, ()=> {
+    console.log('app.js rodando na porta 3000 em http://localhost:3000')
+});
