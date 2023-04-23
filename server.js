@@ -12,7 +12,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 app.use('/', (req,res)=>{
-    res.render('login.html')
+    res.render('initialpage.html')
 });
 
 server.listen(3000, ()=> {
