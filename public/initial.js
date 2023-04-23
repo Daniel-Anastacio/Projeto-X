@@ -5,7 +5,8 @@ var olhoRegister = document.querySelector('.icon2.register ion-icon')
 var wrapper = document.querySelector('.wrapper');
 var loginLink = document.querySelector(".login-link");
 var registerLink = document.querySelector('.register-link');
-var close = document.querySelector('.icon-close');
+var btnCloseLogin = document.querySelector('.icon-close.login');
+var btnCloseRegister = document.querySelector('.icon-close.register');
 var btnLogin = document.querySelector('.btnLogin');
 //troca de telas (criar conta/fazer login)
 registerLink.addEventListener('click', ()=>{
@@ -40,3 +41,25 @@ olhoRegister.addEventListener('click',()=>{
 
 
 //fechar e abrir páginas de login registro
+btnLogin.addEventListener('click',()=>{
+    if(wrapper.style.display === 'none'){
+        wrapper.style.display = 'flex';
+    }else{
+        wrapper.style.display = 'none'
+    }
+});
+
+btnCloseLogin.addEventListener('click',()=>{
+    if(wrapper.style.display === 'flex'){
+        wrapper.style.display = 'none';
+    }else{
+        wrapper.style.display = 'flex';
+    }
+});
+btnCloseRegister.addEventListener('click',()=>{
+    if(wrapper.style.display === 'flex'){
+        wrapper.style.display = 'none';
+    }else{
+        wrapper.style.display = 'flex';
+    }
+});

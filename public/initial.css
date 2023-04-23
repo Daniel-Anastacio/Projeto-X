@@ -227,6 +227,6 @@ header{
     text-decoration: none;
     font-weight: .9em;
 }
-.login-register p a:hover{
+.login-register a:hover{
     text-decoration: underline;
 }
