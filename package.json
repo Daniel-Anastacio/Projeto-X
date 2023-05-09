@@ -1,7 +1,7 @@
 {
   "name": "projeto-x",
   "version": "1.0.0",
-  "description": "Rede social brasileira. Chat e amigos.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,24 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/Daniel-Anastacio/Projeto-X.git"
   },
-  "keywords": [
-    "Chat",
-    "Amigos"
-  ],
-  "author": "Daniel Anastácio",
+  "author": "Daniel",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Daniel-Anastacio/Projeto-X/issues"
   },
   "homepage": "https://github.com/Daniel-Anastacio/Projeto-X#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0",
-    "mysql3": "^0.6.0",
-    "nodemon": "^2.0.22",
-    "sequelize": "^6.31.0",
-    "socket.io": "^4.6.1"
+    "express-generator": "^4.16.1"
   }
 }
