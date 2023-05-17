@@ -41,13 +41,13 @@ olhoRegister.addEventListener('click',()=>{
 
 
 //fechar e abrir páginas de login registro
-btnLogin.addEventListener('click',()=>{
-    if(wrapper.style.display === 'none'){
-        wrapper.style.display = 'flex';
-    }else{
-        wrapper.style.display = 'none'
-    }
-});
+// btnLogin.addEventListener('click',()=>{
+//     if(wrapper.style.display === 'none'){
+//         wrapper.style.display = 'flex';
+//     }else{
+//         wrapper.style.display = 'none'
+//     }
+// });
 
 btnCloseLogin.addEventListener('click',()=>{
     if(wrapper.style.display === 'flex'){
