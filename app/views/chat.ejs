@@ -9,6 +9,31 @@
 </head>
 <body>
     <%- include('./partials/header') %>
+    <div class ='wrapper'>
+        <div class = 'profile'>
+            <a>
+                <span><ion-icon name="person-circle-sharp"></ion-icon></span>
+                <p>John Doe</p>
+            </a>
+        </div>
+        <form id="chat">
+            <div class="messages">
+                <!-- Não sei como faz -->
+            </div>
+            <input type="text" placeholder="Escreva algo...">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <div class = 'friends'>
+        <!-- Como coloca os amigos???? -->
+        <div class = 'profile secundary'>
+            <a href = '#'>
+                <span class = 'profile'><ion-icon name="person-circle-sharp"></ion-icon></span>
+                <p>John Doe</p>
+            </a>
+        </div>
+    </div>
+    
     <%- include('./partials/scripts.ejs') %>
 </body>
 </html>
