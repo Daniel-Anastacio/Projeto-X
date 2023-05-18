@@ -5,11 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('./partials/styles') %>
+    <link rel="stylesheet" href="/stylesheets/perfil.css">
     <title>Document</title>
 </head>
 <body>
-    <%- include('./partials/header') %>
+    
     <!-- Tutorial!!! -->
+    <div class="wrapper_header">
+            <%- include('./partials/header') %>
+           <div class="cols_container">
+               <div class="left_col">
+                   <div class="img_container">
+                       <img src="#" alt="Profile"/>
+                       <span></span>
+                   </div>
+                   <h2>John Doe</h2>
+                   <p>john@example.com</p>
+                   <ul class="about">
+                       <li><span>100</span> amigos</li>
+                       <li><span>100</span> seguidores</li>
+                       <li><span>100</span> seguindo</li>
+                   </ul>
+                   <div class="content">
+                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel doloribus sapiente hic, velit aspernatur aut perspiciatis amet optio autem voluptatibus minima, voluptates inventore, laborum consequuntur esse quasi nemo nisi ratione?
+                       </p>
+                       <!-- <ul>
+                           <li><i class="fab fa-twitter"></i></li>
+                       </ul> -->
+                   </div>
+               </div>
+               <div class="right_col">
+                   <nav>
+                       <ul>
+                           <li><a href="#">photos</a></li>
+                           <li><a href="#">galleries</a></li>
+                           <li><a href="#">groups</a></li>
+                           <li><a href="#">about</a></li>
+                       </ul>
+                       <button>Seguir</button>   
+                   </nav>
+                   <div class="photos">
+                       <img src="#" alt="Post">
+                   </div>
+               </div>
+           </div>
+       </div>
     <%- include('./partials/scripts.ejs') %>
 </body>
 </html>

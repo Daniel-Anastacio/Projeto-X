@@ -1,0 +1,18 @@
+
+.wrapper_chat .friends{
+    float: left;
+    width: calc(30%);
+    background: green;
+}
+.wrapper_chat .chat{
+    float:left;
+    right:0;
+    width: calc(70%);
+    background: blue;
+}
+
+/* .wrapper_chat .messages{
+    height: 400px;
+    width: 500px;
+    background: mediumpurple;
+} */

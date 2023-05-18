@@ -6,32 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <%- include('./partials/styles') %>
+    <link rel="stylesheet" href="/stylesheets/chat.css">
 </head>
 <body>
     <%- include('./partials/header') %>
-    <div class ='wrapper'>
-        <div class = 'profile'>
-            <a>
-                <span><ion-icon name="person-circle-sharp"></ion-icon></span>
-                <p>John Doe</p>
-            </a>
+    <div class ='wrapper_chat'>
+        <div class = 'friends'>
+            <!-- Como coloca os amigos???? -->
+            <div class = 'profile secundary'>
+                <a href = '#'>
+                    <span class = 'profile'><img src="#" alt="perfil"></span>
+                    <p>John Doe</p>
+                </a>
+            </div>
         </div>
+        
         <form id="chat">
+            <div class = 'profile'>
+                <a>
+                    <span><img src="#" alt="perfil"></span>
+                    <p>John Doe</p>
+                </a>
+            </div>
             <div class="messages">
                 <!-- Não sei como faz -->
             </div>
             <input type="text" placeholder="Escreva algo...">
             <button type="submit">Enviar</button>
         </form>
-    </div>
-    <div class = 'friends'>
-        <!-- Como coloca os amigos???? -->
-        <div class = 'profile secundary'>
-            <a href = '#'>
-                <span class = 'profile'><ion-icon name="person-circle-sharp"></ion-icon></span>
-                <p>John Doe</p>
-            </a>
-        </div>
     </div>
     
     <%- include('./partials/scripts.ejs') %>
