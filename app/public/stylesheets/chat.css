@@ -1,5 +1,68 @@
+.wrapper_chat{
+    width: 100%;
 
-.wrapper_chat .friends{
+}
+.profile {
+    position: absolute;
+    padding: 25px 20px;
+    text-align: center;
+    width:70%;
+    /* max-width: 700px; */
+    /* position: relative; */
+    margin:0 auto;
+    background: blue;
+    top: 0;
+    right: 0px;
+}
+.profile .img-container{
+    position: relative;
+    top:60px;
+    left:15%;
+   /* transform: translateX(-50%);  */
+}
+.profile .img-container img{
+    width: 60px;
+    height: 60px;
+    object-fit:cover;
+    border-radius:50%;
+    display: flex;
+    box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+}
+.profile .img-container span{
+   position: relative;
+   background: #000;
+   width: 16px;
+   height: 16px;
+   border-radius: 50%;
+   bottom:15px;
+   right: -45px;
+   border: 2px solid #fff;
+   display:flex
+}
+
+.profile a h2 {
+    position: relative;
+    top:0px;
+    left:29.5%;
+    transform: translateX(-50%);
+    margin-top: 0px;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+.profile a p{
+    position: relative;
+    top:0px;
+    left:27%;
+    transform: translateX(-50%);
+    margin-top: 0px;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+/* .wrapper_chat .friends{
     float: left;
     width: calc(30%);
     background: green;
@@ -9,7 +72,7 @@
     right:0;
     width: calc(70%);
     background: blue;
-}
+} */
 
 /* .wrapper_chat .messages{
     height: 400px;
