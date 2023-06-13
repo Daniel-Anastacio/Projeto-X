@@ -30,7 +30,6 @@ app.use('/login_sign', login_signRouter);
 app.use('/amigos', amigosRouter);
 app.use('/chat', chatRouter);
 
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
