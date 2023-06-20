@@ -1,18 +1,17 @@
-const createError = require('http-errors');
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-const collection = require('./mongodb')
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-const indexRouter = require('./routes/index');
-const sobreRouter = require('./routes/sobre');
-const perfilRouter = require('./routes/perfil');
-const login_signRouter = require('./routes/login_sign');
-const amigosRouter = require('./routes/amigos');
-const chatRouter = require('./routes/chat');
+var indexRouter = require('./routes/index');
+var sobreRouter = require('./routes/sobre');
+var perfilRouter = require('./routes/perfil');
+var login_signRouter = require('./routes/login_sign');
+var amigosRouter = require('./routes/amigos');
+var chatRouter = require('./routes/chat');
 
-const app = express();
+var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,20 +29,6 @@ app.use('/perfil', perfilRouter);
 app.use('/login_sign', login_signRouter);
 app.use('/amigos', amigosRouter);
 app.use('/chat', chatRouter);
-
-app.post("/login_sign", async (req, res)=>{
-
-  const data = {
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password
-  }
-
-  await collection.insertMany([data])
-
-  res.render("./index")
-
-})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

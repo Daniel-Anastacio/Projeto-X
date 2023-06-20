@@ -37,20 +37,20 @@
         <div class="form-box register">
             <h2>Criar Conta</h2>
             <!-- <span class="icon-close register"><ion-icon name="close-outline"></ion-icon></span> -->
-            <form action="../app.js" method = "post">
+            <form action="../login_sign" method = "post">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                    <input type="email"  required>
+                    <input type="text" name = "name" required>
                     <label>Nome de Usuário</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input type="email"  required>
+                    <input type="email"  name = "email" required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon2 register"><ion-icon name="eye-outline"></ion-icon></span>
-                    <input class = 'senha register'type="password"  required>
+                    <input class = 'senha register'type="password" name = "password" required>
                     <label>Senha</label>
                 </div>
                 <div class="remember-forgot">
