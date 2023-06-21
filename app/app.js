@@ -48,7 +48,7 @@ app.post("/login_sign", async (req, res)=>{
       const check = await collection.findOne({email: req.body.email_login})
 
       if (check.password === req.body.password_login){
-        console.log('logado')
+        console.log(check.name,'logado com sucesso')
         res.render('./index')
       }else{
         console.log('senha incorreta')
