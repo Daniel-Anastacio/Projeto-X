@@ -33,15 +33,31 @@ app.use('/chat', chatRouter);
 
 app.post("/login_sign", async (req, res)=>{
 
-  const data = {
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password
+  if (req.body.name && req.body.email && req.body.password){
+    const data = {
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password
+    }
+  
+    await collection.insertMany([data])
+  
+    res.render("./index")
+  }else if(req.body.email_login && req.body.password_login){
+    try{
+      const check = await collection.findOne({email: req.body.email_login})
+
+      if (check.password === req.body.password_login){
+        console.log('logado')
+        res.render('./index')
+      }else{
+        console.log('senha incorreta')
+      }
+    }catch{
+      console.log('algo de errado')
+    }
   }
-
-  await collection.insertMany([data])
-
-  res.render("./index")
+  
 
 })
 
