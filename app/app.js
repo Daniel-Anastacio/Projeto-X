@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const collection = require('./mongodb')
+const crypto = require('crypto');
 
 const indexRouter = require('./routes/index');
 const sobreRouter = require('./routes/sobre');
@@ -31,13 +32,19 @@ app.use('/login_sign', login_signRouter);
 app.use('/amigos', amigosRouter);
 app.use('/chat', chatRouter);
 
+const getHashedPassword = (password) => {
+  const sha256 = crypto.createHash('sha256');
+  const hash = sha256.update(password).digest('base64');
+  return hash;
+}
+
 app.post("/login_sign", async (req, res)=>{
 
   if (req.body.name && req.body.email && req.body.password){
     const data = {
       name: req.body.name,
       email: req.body.email,
-      password: req.body.password
+      password: getHashedPassword(req.body.password)
     }
   
     await collection.insertMany([data])
@@ -47,7 +54,7 @@ app.post("/login_sign", async (req, res)=>{
     try{
       const check = await collection.findOne({email: req.body.email_login})
 
-      if (check.password === req.body.password_login){
+      if (check.password === getHashedPassword(req.body.password_login)){
         console.log(check.name,'logado com sucesso')
         res.render('./index')
       }else{
