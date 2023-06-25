@@ -5,23 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('./partials/styles') %>
+    <link rel ="stylesheet" href = "/stylesheets/amigos.css" type = "text/css">
     <title>Document</title>
 </head>
-    <div class="search">
-        <input type="text" placeholder="Procure uma pessoa">
-        <!-- <label>Procure uma pessoa</label> -->
-    </div>
+<div class = "wrapper">
+    <form class="input-box">
+        <input type="text" class = input-search>
+        <label>Procure uma pessoa</label>
+        <button type="button" class="search">Pesquisar</button>
+    </form>
     <div class ='new_users'>
         <div class = 'user'>
             <!-- como coloca os novos usuários??? -->
-            <a href = '#'>
+            <a href = "/perfil">
+            <div class = 'profile'>
+                    <div class="img-container">
+                        <img src="/images/person.svg" alt="perfil">
+                        <span></span>
+                    </div>
+                    <h2 class="name">John Doe</h2>
+            </div>
+            </a>
+            <!-- <a href = '#'>
                 <span class = 'profile'><img src="#" alt="Foto"></span>
                 <p>John Doe</p>
-            </a>
+            </a> -->
             <button type="submit" class = 'follow'>Seguir</button>
         </div>
     </div>
+</div>
     <%- include('./partials/header') %>
     <%- include('./partials/scripts.ejs') %>
+    <script src = "javascripts/amigos_frontend.js"></script>
 </body>
 </html>
